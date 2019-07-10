@@ -1,0 +1,45 @@
+﻿<Window x:Class="DisPatch.MainWindow"
+        Background="#CCCCCC"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontSize="14"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DisPatch"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="501.368" Width="771.795" FlowDirection="RightToLeft" FontFamily="Tahoma">
+    <Grid>
+        <Grid Background="LightSkyBlue" VerticalAlignment="Top" Height="100">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="سیستم Cardi-Poem" Foreground="Black" FontSize="20" Margin="0 10"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="نام مرکز اورژانس: ....." Foreground="Black" FontSize="20" Margin="0 50"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right"  Margin="0,50,20,0">
+                <TextBlock Name="dateTextBox" Foreground="Black" FontSize="20" Margin="10" Width="198" Height="34"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left"  Margin="0,50,20,0">
+                <TextBlock Name="timeTextBox"  Foreground="Black" FontSize="20" Margin="10" Width="198" Height="34"/>
+            </StackPanel>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="160" Margin="161,185,0,0" VerticalAlignment="Top" Width="416">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="43*"/>
+                <ColumnDefinition Width="185*"/>
+                <ColumnDefinition Width="31*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="ورود" Background="#5B9BD5" HorizontalAlignment="Left" Margin="114,118,0,0" VerticalAlignment="Top" Width="75" Height="31" Grid.Column="1" Click="login"/>
+
+            <TextBox  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="25,30,0,0" TextWrapping="Wrap" Background="#CCCCCC" Text="نام کاربری:" VerticalAlignment="Top" Width="73" BorderBrush="#FFCCCCCC"/>
+            <TextBox Name="UsernameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="41" Margin="105,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        </Grid>
+        <PasswordBox Name="PasswordTextBox" Margin="334,253,0,0" VerticalAlignment="Top" Height="38" HorizontalAlignment="Left" Width="134" RenderTransformOrigin="0.033,0.417"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="267,258,0,0" TextWrapping="Wrap" Background="#CCCCCC" Text="رمز عبور:" VerticalAlignment="Top" Width="58" RenderTransformOrigin="1.549,11.543" BorderBrush="#FFCCCCCC"/>
+        <Button Content=" فراموشی رمز عبور "  Background="#CCCCCC" HorizontalAlignment="Left" Margin="286,350,0,0" VerticalAlignment="Top" Width="131" Height="33" BorderBrush="#FFCCCCCC"/>
+        <Button Content="تماس با پشتیبانی" HorizontalAlignment="Left" Margin="614,415,0,0" VerticalAlignment="Top" Width="113" Height="45" Grid.RowSpan="4" Background="#FFCCCCCC" BorderBrush="#FFCCCCCC"/>
+    </Grid>
+</Window>

@@ -1,0 +1,125 @@
+﻿<Window x:Class="DisPatch.Data"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DisPatch"
+        mc:Ignorable="d"
+        Title="Data" Height="624" Width="1035.5">
+    <Grid Height="648" VerticalAlignment="Top" Margin="0,0,0,-0" HorizontalAlignment="Right" Width="1040">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="16*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="LightSkyBlue" VerticalAlignment="Top" Height="100">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="سیستم Cardi-Poem" Foreground="Black" FontSize="20" Margin="0 10"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="--- :نام مرکز اورژانس" Foreground="Black" FontSize="20" Margin="0 50"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right"  Margin="0,50,20,0">
+                <TextBlock  Name="time2TextBox" Foreground="Black" FontSize="20" Margin="10" Width="198" Height="34"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left"  Margin="20,50,20,0">
+                <TextBlock x:Name="date2TextBox" Foreground="Black" FontSize="20" Margin="10" Width="198" Height="34"/>
+            </StackPanel>
+        </Grid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="108" Margin="630,139,0,0" Stroke="Black" VerticalAlignment="Top" Width="380"/>
+        <Image HorizontalAlignment="Left" Height="108" Margin="908,139,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="647,156,0,0" TextWrapping="Wrap" Text="  نام و نام خانوادگی تکنسین اورژانس: ناصر الشهرانی" VerticalAlignment="Top" Width="264" RenderTransformOrigin="-0.083,-0.261"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="664,202,0,0" TextWrapping="Wrap" Text="  69 :شماره کاربری" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.083,-0.261"/>
+
+        <Label Content="بیماران اورژنسی" HorizontalAlignment="Left"  Margin="882,260,0,0"  FlowDirection="LeftToRight" VerticalAlignment="Top" Height="38"  Width="150" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold" Cursor="None" BorderBrush="#FFD82828" Background="#FFEA1717" RenderTransformOrigin="20,20"/>
+        <Label Content="بیماران پذیرش شده" HorizontalAlignment="Left"  Margin="880,53,0,0"  FlowDirection="LeftToRight" VerticalAlignment="Top" Height="38"  Width="150" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold" Cursor="None" BorderBrush="#FFD82828" Background="#94a7d8" RenderTransformOrigin="20,20" Grid.Row="1"/>
+        <DataGrid HorizontalAlignment="Left" FlowDirection="RightToLeft" Height="114" Margin="93,96,0,0" VerticalAlignment="Top" Width="947" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="نام و نام خانوادگی بیمار" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="نام پدر" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="سن" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="پزشک مربوطه" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="تشخیص/دستورات پزشکی" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="نوارقلب / علایم بالینی" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="موقیعیت مکانی بیمار" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="ارتباط با بیمار  پزشک" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="مشخصات آمبولانس / تکنسین اعزامی" Binding="{Binding Birthday}" />
+            </DataGrid.Columns>
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <DockPanel Background="GhostWhite">
+                        <Image DockPanel.Dock="Left" Source="{Binding ImageUrl}" Height="64" Margin="10" />
+                        <Grid Margin="0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="ID: " FontWeight="Bold" />
+                            <TextBlock Text="{Binding Id}" Grid.Column="1" />
+
+                            <TextBlock Text="Name: " FontWeight="Bold" Grid.Row="1" />
+                            <TextBlock Text="{Binding Name}" Grid.Column="1" Grid.Row="1" />
+
+                            <TextBlock Text="Birthday: " FontWeight="Bold" Grid.Row="2" />
+                            <TextBlock Text="{Binding Birthday, StringFormat=d}" Grid.Column="1" Grid.Row="2" />
+
+                            <TextBlock Text="deat: " FontWeight="Bold" Grid.Row="2" />
+                            <TextBlock Text="{Binding Birthday, StringFormat=d}" Grid.Column="1" Grid.Row="3" />
+                        </Grid>
+                    </DockPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
+        <DataGrid HorizontalAlignment="Left" FlowDirection="RightToLeft" Height="100" Margin="109,303,0,0" VerticalAlignment="Top" Width="931" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="نام و نام خانوادگی بیمار" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="نام پدر" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="سن" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="پزشک مربوطه" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="تشخیص/دستورات پزشکی" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="نوارقلب / علایم بالینی" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="موقیعیت مکانی بیمار" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="ارتباط با بیمار  پزشک" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="پذیرش بیمار / اطلاع رسانی" Binding="{Binding Birthday}" />
+            </DataGrid.Columns>
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <DockPanel Background="GhostWhite">
+                        <Image DockPanel.Dock="Left" Source="{Binding ImageUrl}" Height="64" Margin="10" />
+                        <Grid Margin="0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="ID: " FontWeight="Bold" />
+                            <TextBlock Text="{Binding Id}" Grid.Column="1" />
+
+                            <TextBlock Text="Name: " FontWeight="Bold" Grid.Row="1" />
+                            <TextBlock Text="{Binding Name}" Grid.Column="1" Grid.Row="1" />
+
+                            <TextBlock Text="Birthday: " FontWeight="Bold" Grid.Row="2" />
+                            <TextBlock Text="{Binding Birthday, StringFormat=d}" Grid.Column="1" Grid.Row="2" />
+
+                            <TextBlock Text="deat: " FontWeight="Bold" Grid.Row="2" />
+                            <TextBlock Text="{Binding Birthday, StringFormat=d}" Grid.Column="1" Grid.Row="3" />
+                        </Grid>
+                    </DockPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
+
+    </Grid>
+</Window>
