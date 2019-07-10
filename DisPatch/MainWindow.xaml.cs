@@ -29,7 +29,8 @@ namespace DisPatch
 
             timeTextBox.Text = "ساعت: " + DateTime.Now.ToString("HH:mm:ss");//"HH:mm:ss"
             dateTextBox.Text = DateTime.Now.ToString("D");//"HH:mm:ss"
-                                                                 // timeTextBox.Text = DateTime.Now.ToString("yyyy/MM/dd");
+
+                                                              
             timer.Start();
         }
 
