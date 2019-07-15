@@ -76,9 +76,10 @@
                 </DataTemplate>
             </DataGrid.RowDetailsTemplate>
         </DataGrid>
-        <DataGrid HorizontalAlignment="Left" FlowDirection="RightToLeft" Height="100" Margin="109,303,0,0" VerticalAlignment="Top" Width="931" Grid.RowSpan="2">
+        <DataGrid  x:Name="dgv" HorizontalAlignment="Left" FlowDirection="RightToLeft" Height="100" Margin="109,303,0,0" VerticalAlignment="Top" Width="931" Loaded="DataGrid_Loaded" Grid.RowSpan="2">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="نام و نام خانوادگی بیمار" Binding="{Binding Name}" />
+          
+                <!--<DataGridTextColumn Header="نام و نام خانوادگی بیمار" Binding="{Binding Name}" />
                 <DataGridTextColumn Header="نام پدر" Binding="{Binding Birthday}" />
                 <DataGridTextColumn Header="سن" Binding="{Binding Birthday}" />
                 <DataGridTextColumn Header="پزشک مربوطه" Binding="{Binding Birthday}" />
@@ -86,7 +87,7 @@
                 <DataGridTextColumn Header="نوارقلب / علایم بالینی" Binding="{Binding Birthday}" />
                 <DataGridTextColumn Header="موقیعیت مکانی بیمار" Binding="{Binding Birthday}" />
                 <DataGridTextColumn Header="ارتباط با بیمار  پزشک" Binding="{Binding Birthday}" />
-                <DataGridTextColumn Header="پذیرش بیمار / اطلاع رسانی" Binding="{Binding Birthday}" />
+                <DataGridTextColumn Header="پذیرش بیمار / اطلاع رسانی" Binding="{Binding Birthday}" />-->
             </DataGrid.Columns>
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
