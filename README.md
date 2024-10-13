@@ -13,7 +13,7 @@ Run the application: Execute the generated executable file.
 Enter patient data: Input patient information such as name, age, medical history, and symptoms.
 Synchronize with web API: Click the "Synchronize" button to send the entered data to the web application.
 
-###Features
+### Features
 Data entry: Users can input patient data into various fields.
 Data validation: The application ensures that entered data is valid and meets specific criteria.
 Synchronization with web API: Data is securely transmitted to the web application for storage and processing.
